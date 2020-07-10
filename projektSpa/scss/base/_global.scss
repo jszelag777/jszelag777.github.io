@@ -1,0 +1,30 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    color: $color-third;
+    font-size: $base-font-size;
+}
+
+h1{
+    font-size: $base-font-size + 34;
+}
+h2{
+    font-size: $base-font-size + 26;
+    font-family: $font-secondary;
+    color: $color-second;
+}
+h3{
+    font-size: $base-font-size + 6;
+    font-family: $font-secondary;
+}
+p{
+    font-family: $font-primary;
+    color: $color-second;
+    font-weight: 300;
+    line-height: $line-height-primary;
+}
+
+
+    

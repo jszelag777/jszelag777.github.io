@@ -1,0 +1,42 @@
+.team-header{
+    margin: 0 auto;
+    max-width: 850px;
+    background-color: $color-fifth;
+    text-align: $text-align;
+    padding: 60px 23px;
+}
+
+.conteiner-third{
+    max-width: 1140px;
+    padding: 0 23px;
+    @include flexbox;
+    margin: 0 auto;
+
+    .team-item{
+        background-color: $color-fifth;
+        text-align: $text-align;
+        margin-bottom: 30px;
+
+        &:last-of-type{
+            margin-bottom: 0;
+        }
+
+        img{
+            width: 100%;
+            height: auto;
+        }
+    } 
+    
+    @media (min-width: $medium) {
+        .team-item{
+            flex-basis: 32%;
+            margin-right: 20px;
+            margin-bottom: 0;
+
+            &:last-of-type{
+                margin-right: 0;
+            }
+        }
+    }
+}
+

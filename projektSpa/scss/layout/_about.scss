@@ -1,0 +1,27 @@
+div.conteiner-primary{
+    margin: 0 auto;
+    max-width: 850px;
+    background-color: $color-fifth;
+    text-align: $text-align;
+    padding: 60px 23px;
+
+    img{
+        max-width: 100px;
+    }
+
+    p:first-of-type{
+        text-transform: $text-transform-base;
+    }
+
+    p:last-of-type{
+        color: $color-fourth;
+    }
+}
+
+@media (min-width: $medium) {
+    div.conteiner-primary{
+        padding-bottom: 120px;
+    }
+}
+
+    

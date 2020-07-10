@@ -1,0 +1,31 @@
+
+%btn{
+    display: inline-block;
+    border-radius: 30px;
+    text-transform: $text-transform-base;
+    border: 0;
+    text-decoration: none;
+    padding: 15px 35px;
+}
+
+.btn-primary{
+    @extend %btn;
+    color: $color-fifth;
+    background-color: $color-first;
+}
+
+.btn-primary:hover{
+    @extend %btn;
+    background-color: $color-third;
+}
+
+.btn-second{
+    @extend %btn;
+    color: $color-fifth;
+    background-color: $color-third;
+}
+
+.btn-second:hover{
+    @extend %btn;
+    background-color: $color-first;
+}
