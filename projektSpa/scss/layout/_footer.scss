@@ -1,0 +1,25 @@
+footer{
+    text-align: center;
+    padding: 30px 0;
+
+    img {
+        width: 100px;
+    }
+
+    .menu{
+        display: inline-block;
+    }
+
+    .footer-nav {
+        .menu {
+            @include menu-list;
+            padding: 20px 0;
+
+            .menu-item {
+                padding: 10px 0;
+            }
+        }
+    }
+
+    
+}

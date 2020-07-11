@@ -9,6 +9,8 @@ body{
 
 h1{
     font-size: $base-font-size + 34;
+    font-family: $font-secondary;
+    font-weight: bold;
 }
 h2{
     font-size: $base-font-size + 26;
@@ -18,12 +20,32 @@ h2{
 h3{
     font-size: $base-font-size + 6;
     font-family: $font-secondary;
+    color: $color-second;
 }
 p{
     font-family: $font-primary;
-    color: $color-second;
-    font-weight: 300;
+    color: $color-text-primary;
     line-height: $line-height-primary;
+}
+
+.seaction-header{
+    margin: 0 auto;
+    max-width: 850px;
+    text-align: $text-align;
+    padding: 60px 23px;
+    margin: 0 auto;
+}
+
+.conteiner-second{
+    @include flexbox; 
+    @include flex-align-center(center, center);
+    margin: 0 auto;
+}    
+
+.conteiner-primary{
+    max-width: 1140px;
+    padding: 0 23px;
+    margin: 0 auto;
 }
 
 

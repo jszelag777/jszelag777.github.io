@@ -8,7 +8,22 @@
     align-items: $align;
 }
 
-@mixin margin($top, $left) {
-    top: $top;
-    left: $left;
+@mixin menu-list {
+    list-style: none;
+    background-color: $color-fifth;
+
+    .menu-item {
+        display: inline-block;
+        margin: 0 20px;
+        font-size: $base-font-size;
+        text-transform: uppercase;
+
+        a {
+            color: $color-second;
+            font-weight: 700;
+            text-decoration: none;
+        }
+    }
+
 }
+

@@ -1,0 +1,108 @@
+.main-nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    background-color: $color-fifth;
+    padding: 12px 0;
+
+
+    .main-nav-holder {
+        @include flexbox;
+        justify-content: space-between;
+    }
+
+
+    .logo-spa {
+        height: 50px;
+        display: inline-block; 
+
+        img {
+            height: 100%;
+        }
+    }
+
+    %mobile-icons{
+        font-size: 30px;
+        line-height: 50px;
+        cursor: pointer;
+    }
+
+    .mobile-hamburger {
+        @extend %mobile-icons;
+        color: $color-first;
+    }
+
+    .mobile-close {
+        @extend %mobile-icons;
+        color: $color-fifth;
+        text-align: right;
+        height: 50px;
+    }
+
+
+    .open-menu-holder {
+        position: fixed;
+        background-color: $color-first;
+        top: 0;
+        right: 0;
+        max-width: 480px;
+        width: 480px;
+        text-align: right;
+        padding: 12px 23px;
+        display: none;
+
+        &.open {
+            display: block;
+        }
+
+
+        .menu {
+            list-style: none;
+
+            .menu-item {
+                font-size: 50px;
+                text-transform: uppercase;
+                padding: 20px 0;
+
+                a {
+                    color: $color-fifth;
+                    text-decoration: none;
+                }
+            }
+        }
+
+    }
+
+    @media (min-width: $large) {
+
+
+        .main-nav-holder {
+            justify-content: flex-start;
+        }
+
+
+        .logo-spa {
+            height: 80px;
+        }
+
+
+        %mobile-icons {
+            display: none;
+        }
+
+        .open-menu-holder {
+            display: block;
+            position: static;
+            background-color: transparent;
+            width: auto;
+            max-width: 100%;
+            padding: 0;
+            align-self: flex-start;
+
+            .menu {
+               @include menu-list;
+            }
+        }
+    }
+}

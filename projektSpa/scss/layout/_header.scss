@@ -1,0 +1,84 @@
+.header{
+    height: 750px;
+    @include flexbox;
+    @include flex-align-center(flex-start, center);
+    position: relative;
+
+    .header-description{
+        font-family: $font-secondary;
+        letter-spacing: 2px;
+        color: $color-second;
+        font-weight: bold;
+    }
+    
+    .main-header-content {
+        color: #555555;
+    }
+    
+    .btn-panel {
+        margin-top: 40px;
+    
+        .reserve{
+            display: inline-block;
+            padding: 15px 20px;
+            color: $color-fifth;
+            background-color: $color-first;
+            text-decoration: none;
+            transition: all .3s;
+    
+            &:hover {
+                background-color: $color-third;
+            }
+        }
+    
+        .watch {
+            display: inline-block;
+            margin-left: 15px;
+            color: $color-third;
+            text-decoration: none;
+    
+            i {
+                height: 35px;
+                width: 35px;
+                text-align: center;
+                line-height: 35px;
+                border: 1px solid $color-third;
+                border-radius: 50%;
+            }
+        }
+    }
+    .header-flowers {
+        max-width: 8%;
+        position: absolute;
+        left: 0;
+        top: 35%;
+        z-index: -10;
+    }   
+
+    .header-bg {
+        position: absolute;
+        top: 0;
+        right: 0;
+        max-width: 30%;
+        z-index: 20;
+        display: none;
+    }
+
+    @media all and (min-width: $extra-large) {
+        .header-bg {
+            max-width: 40%;
+        }
+    }
+
+    @media all and (min-width: $large) {
+
+        .main-header-holder {
+            width: 60%;
+        }
+
+        .header-bg {
+            display: block;
+        }
+    }
+}
+

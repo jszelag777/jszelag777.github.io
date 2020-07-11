@@ -1,42 +1,74 @@
-.team-header{
-    margin: 0 auto;
-    max-width: 850px;
+.team-item-outer{
+    padding: 0 10px;
     background-color: $color-fifth;
-    text-align: $text-align;
-    padding: 60px 23px;
-}
-
-.conteiner-third{
-    max-width: 1140px;
-    padding: 0 23px;
-    @include flexbox;
     margin: 0 auto;
+    flex-basis: 100%;
+    margin-bottom: 25px;
+
+    &:last-of-type {
+        margin-bottom: 200px;
+    }
 
     .team-item{
-        background-color: $color-fifth;
+        position: relative;
+        padding: 0 10px;
+        margin-top: 30px;
         text-align: $text-align;
-        margin-bottom: 30px;
 
-        &:last-of-type{
-            margin-bottom: 0;
+        .team-item-caption {
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: auto;
+            width: 80%;
+            bottom: -50px;
+            background-color: $color-fifth;
+            transition: all .3s;
+    
+            &:hover {
+                box-shadow: 0 5px 20px $color-box-shadow;
+                padding-bottom: 30px;
+            }
+    
+            .team-social-icons {
+                transition: all .3s;
+                height: 0;
+                overflow: hidden;
+    
+                a {
+                    display: inline-block;
+                    height: 35px;
+                    width: 35px;
+                    font-size: 20px;
+                    line-height: 35px;
+                    text-align: center;
+                    border: 1px solid $color-second;
+                    color: $color-second;
+                    border-radius: 50%;
+                    margin: 0 10px;
+    
+                    &:hover {
+                        background-color: $color-first;
+                    }
+                }
+            }
+            
+            &:hover {
+                .team-social-icons {
+                height: 35px;
+                }
+            }
         }
 
         img{
             width: 100%;
-            height: auto;
-        }
-    } 
-    
-    @media (min-width: $medium) {
-        .team-item{
-            flex-basis: 32%;
-            margin-right: 20px;
-            margin-bottom: 0;
-
-            &:last-of-type{
-                margin-right: 0;
-            }
         }
     }
-}
+} 
 
+@media (min-width: $medium) {
+    .team-item-outer{
+        flex-basis: 33%;
+        margin-bottom: 200px;
+    }
+}

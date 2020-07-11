@@ -1,0 +1,61 @@
+.make-appoitment-bg{
+    height: 0;
+    img{
+        visibility: hidden;
+    }
+}
+.make-appoitment-form{
+    flex-basis: 100%;
+    background-color: $color-first;
+    padding: 80px 40px;
+
+    .appointment-button{
+        @include flexbox; 
+        @include flex-align-center(center, center);
+        margin: 0 auto;
+    }
+
+    .appointment-message {
+        width: 100%;
+        display: none;
+
+        &.error {
+            color: #f00;
+            display: block;
+        }
+
+        &.send {
+            color: #fff;
+            display: block;
+        }
+    }
+}
+
+@media (min-width: $medium) {
+    .make-appoitment-bg{
+        flex-basis: 40%;
+        height: 640px;
+        img{
+            width: 100%;
+            height: 100%;
+            visibility: visible;
+            object-fit: cover;
+        } 
+    }
+    .make-appoitment-form{
+        height: 640px;
+        padding: 60px 60px;
+        flex-basis: 60%;
+        background-color: $color-first;
+        input, select{
+            width: 49%;
+        }
+        textarea {
+            margin: 70px 0;
+        }
+        .appointment-button{
+            display: block;
+        }
+    }
+}
+    

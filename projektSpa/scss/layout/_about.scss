@@ -1,10 +1,4 @@
-div.conteiner-primary{
-    margin: 0 auto;
-    max-width: 850px;
-    background-color: $color-fifth;
-    text-align: $text-align;
-    padding: 60px 23px;
-
+section.about{
     img{
         max-width: 100px;
     }
@@ -19,8 +13,8 @@ div.conteiner-primary{
 }
 
 @media (min-width: $medium) {
-    div.conteiner-primary{
-        padding-bottom: 120px;
+    section.about{
+        padding-bottom: 60px;
     }
 }
 

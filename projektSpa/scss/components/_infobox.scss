@@ -1,0 +1,54 @@
+.conteiner-infobox{
+    max-width: 1140px;
+    padding: 0 23px;
+    margin: 0 auto;
+    @include flexbox;
+    @include flex-align-center(center, center);
+
+    .infobox-item-outer{
+        padding: 0 10px;
+        background-color: $color-fifth;
+        margin: 0 auto;
+        flex-basis: 100%;
+        margin-bottom: 25px;
+    
+        &:last-of-type{
+            margin-bottom: 0;
+        }
+    
+        .infobox-item{
+            padding: 25px;
+            border: 1px solid $color-sixth;
+            text-align: $text-align;
+            &:hover{
+                box-shadow: 0 5px 20px $color-box-shadow;
+            }
+
+            .meta{
+                text-transform: $text-transform-base;
+                font-size: $base-font-size - 4;
+                letter-spacing: 1px;
+                padding-top: 10px;
+                a{
+                    text-decoration: none;
+                    color: inherit;
+                    padding: 0 5px;
+                }
+            }
+        }
+        img{
+            width: 100%;
+            height: auto;
+        }
+    } 
+    
+    @media (min-width: $medium) {
+        .infobox-item-outer{
+            flex-basis: 33%;
+            margin-bottom: 0;
+        }
+    }
+}
+
+
+

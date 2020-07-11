@@ -11,21 +11,34 @@
 .btn-primary{
     @extend %btn;
     color: $color-fifth;
-    background-color: $color-first;
+    background-color: $color-third;
 }
 
 .btn-primary:hover{
     @extend %btn;
-    background-color: $color-third;
+    background-color: $color-first;
 }
 
 .btn-second{
     @extend %btn;
     color: $color-fifth;
-    background-color: $color-third;
+    background-color: $color-first;
 }
 
 .btn-second:hover{
     @extend %btn;
-    background-color: $color-first;
+    background-color:  $color-third;
+}
+
+.btn-form{
+    @extend %btn;
+    color: $color-second;
+    background-color: $color-fifth;
+    font-weight: bold;
+}
+
+.btn-form:hover{
+    @extend %btn;
+    color: $color-fifth;
+    background-color:  $color-third;
 }
