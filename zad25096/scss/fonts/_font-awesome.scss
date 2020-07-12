@@ -16,7 +16,7 @@
 .fa {
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;
-  font-size: 25px;
+  font-size: 15px;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -41,7 +41,8 @@
   font-size: 5em;
 }
 .fa-fw {
-  width: 1.28571429em;
+  width: 25px;
+  font-size: 25px;
   text-align: center;
 }
 .fa-ul {

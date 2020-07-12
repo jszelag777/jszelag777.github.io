@@ -105,7 +105,7 @@
 .fa {
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;
-  font-size: 25px;
+  font-size: 15px;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -136,7 +136,8 @@
 }
 
 .fa-fw {
-  width: 1.28571429em;
+  width: 25px;
+  font-size: 25px;
   text-align: center;
 }
 
@@ -11526,7 +11527,7 @@ hr.divider-light-dark {
 
 hr.divider-light {
   border-color: #fff;
-  max-width: 79.2px;
+  width: 150px;
   border-width: 3px;
 }
 
@@ -11840,11 +11841,11 @@ form fieldset input[name="comment"], form fieldset input[name="message"] {
   border-radius: 100%;
   line-height: 72px;
   border: 2px solid #a5e200;
+  transition: transform 1s;
 }
 
 .t108-one-page #counters-services .icon-services:hover {
   transform: rotate(-45deg);
-  transition: transform 1s;
 }
 
 .t108-one-page #counters-services .counters-box {
