@@ -434,67 +434,59 @@ section.about p:last-of-type {
   }
 }
 
-.make-appoitment-bg {
+.appoitment-bg {
   height: 0;
 }
 
-.make-appoitment-bg img {
+.appoitment-bg img {
   visibility: hidden;
 }
 
-.make-appoitment-form {
+.appointment-form {
   flex-basis: 100%;
   background-color: #1ba4ce;
   padding: 80px 40px;
 }
 
-.make-appoitment-form .appointment-button {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-}
-
-.make-appoitment-form .appointment-message {
+.appointment-form .appointment-message {
   width: 100%;
   display: none;
 }
 
-.make-appoitment-form .appointment-message.error {
+.appointment-form .appointment-message.error {
   color: #f00;
   display: block;
 }
 
-.make-appoitment-form .appointment-message.send {
+.appointment-form .appointment-message.send {
   color: #fff;
   display: block;
 }
 
 @media (min-width: 768px) {
-  .make-appoitment-bg {
+  .appoitment-bg {
     flex-basis: 40%;
     height: 640px;
   }
-  .make-appoitment-bg img {
+  .appoitment-bg img {
     width: 100%;
     height: 100%;
     visibility: visible;
     object-fit: cover;
   }
-  .make-appoitment-form {
+  .appointment-form {
     height: 640px;
     padding: 60px 60px;
     flex-basis: 60%;
     background-color: #1ba4ce;
   }
-  .make-appoitment-form input, .make-appoitment-form select {
+  .appointment-form input, .appointment-form select {
     width: 49%;
   }
-  .make-appoitment-form textarea {
+  .appointment-form textarea {
     margin: 70px 0;
   }
-  .make-appoitment-form .appointment-button {
+  .appointment-form .btn-form {
     display: block;
   }
 }

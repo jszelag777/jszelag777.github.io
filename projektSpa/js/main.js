@@ -1,10 +1,13 @@
 document.getElementsByClassName('mobile-hamburger')[0].addEventListener('click', function(){
     document.getElementsByClassName('open-menu-holder')[0].classList.toggle('open');
-})
+});
 
 document.getElementsByClassName('mobile-close')[0].addEventListener('click', function(){
     document.getElementsByClassName('open-menu-holder')[0].classList.toggle('open');
 })
+
+
+
 
 const createAppointment = (appointment) => {
     
@@ -26,7 +29,7 @@ const createAppointment = (appointment) => {
     });
 }
 
-document.getElementById('make-appointment-form').addEventListener('submit', function(e){
+document.getElementById('appointment-form').addEventListener('submit', function(e){
     e.preventDefault();
 
     const appointmentMessage = document.querySelector('.appointment-message');
@@ -61,5 +64,4 @@ document.getElementById('make-appointment-form').addEventListener('submit', func
         appointmentMessage.innerText = `Wypełnij wymagane pola`;
     }
 
-    
 })

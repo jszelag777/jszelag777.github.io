@@ -1,19 +1,13 @@
-.make-appoitment-bg{
+.appoitment-bg{
     height: 0;
     img{
         visibility: hidden;
     }
 }
-.make-appoitment-form{
+.appointment-form{
     flex-basis: 100%;
     background-color: $color-first;
     padding: 80px 40px;
-
-    .appointment-button{
-        @include flexbox; 
-        @include flex-align-center(center, center);
-        margin: 0 auto;
-    }
 
     .appointment-message {
         width: 100%;
@@ -32,7 +26,7 @@
 }
 
 @media (min-width: $medium) {
-    .make-appoitment-bg{
+    .appoitment-bg{
         flex-basis: 40%;
         height: 640px;
         img{
@@ -42,7 +36,7 @@
             object-fit: cover;
         } 
     }
-    .make-appoitment-form{
+    .appointment-form{
         height: 640px;
         padding: 60px 60px;
         flex-basis: 60%;
@@ -53,7 +47,7 @@
         textarea {
             margin: 70px 0;
         }
-        .appointment-button{
+        .btn-form{
             display: block;
         }
     }
