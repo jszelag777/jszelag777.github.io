@@ -66,20 +66,25 @@ document.getElementById('appointment-form').addEventListener('submit', function(
 
 })
 
-const createAppointmentContact = (appointmentContact) => {
+const contact = (appointmentContact) => {
     
     const contactMessage = document.querySelector('.contact-message');
 
-    fetch('https://formspree.io/FORM_ID', {
+    fetch('https://formspree.io/mwkronwn', {
         mode: 'cors',
         method: 'POST',
-        body: JSON.stringify(appointmentContact)
+        headers: {
+            'Content-Type': 'application/json'
+            // 'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: JSON.stringify(appointmentContact),
+
     })
     .then(res => res.json())
     .then(resJSON=>{
         console.log(resJSON);
         contactMessage.classList.add('send');
-        contactMessage.innerText = `Dziękujemy ${resJSON.appointmentContact.name}. Twoja wiadomość została wysłana!`
+        contactMessage.innerText = `Dziękujemy ${appointmentContact.name}. Twoja wiadomość została wysłana!`
     });
 }
 
@@ -108,7 +113,7 @@ document.getElementById('contact-form').addEventListener('submit', function(e){
 
 
     if(allFieldsContact) {
-        createAppointmentContact(appointmentContact);
+        contact(appointmentContact);
     } else {
         contactMessage.classList.add('error');
         contactMessage.innerText = `Wypełnij wymagane pola`;
