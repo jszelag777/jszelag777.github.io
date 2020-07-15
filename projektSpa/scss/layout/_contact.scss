@@ -39,6 +39,20 @@
                 @include flex-align-center(center, center);
                 margin: 0 auto;
             }
+            .contact-message {
+                width: 100%;
+                display: none;
+        
+                &.error {
+                    color: #f00;
+                    display: block;
+                }
+        
+                &.send {
+                    color: #fff;
+                    display: block;
+                }
+            }
     }
 
     @media (min-width: $medium) {

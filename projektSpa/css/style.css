@@ -440,6 +440,9 @@ section.about p:last-of-type {
 
 .appoitment-bg img {
   visibility: hidden;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .appointment-form {
@@ -469,10 +472,7 @@ section.about p:last-of-type {
     height: 640px;
   }
   .appoitment-bg img {
-    width: 100%;
-    height: 100%;
     visibility: visible;
-    object-fit: cover;
   }
   .appointment-form {
     height: 640px;
@@ -547,6 +547,21 @@ section.about p:last-of-type {
   justify-content: center;
   align-items: center;
   margin: 0 auto;
+}
+
+.contact .contact-form .contact-message {
+  width: 100%;
+  display: none;
+}
+
+.contact .contact-form .contact-message.error {
+  color: #f00;
+  display: block;
+}
+
+.contact .contact-form .contact-message.send {
+  color: #fff;
+  display: block;
 }
 
 @media (min-width: 768px) {
@@ -682,6 +697,9 @@ footer .footer-nav .menu .menu-item {
   }
   .header .header-bg {
     display: block;
+  }
+  .header .conteiner-primary {
+    width: 1140px;
   }
 }
 

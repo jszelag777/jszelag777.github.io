@@ -65,3 +65,53 @@ document.getElementById('appointment-form').addEventListener('submit', function(
     }
 
 })
+
+const createAppointmentContact = (appointmentContact) => {
+    
+    const contactMessage = document.querySelector('.contact-message');
+
+    fetch('https://formspree.io/FORM_ID', {
+        mode: 'cors',
+        method: 'POST',
+        body: JSON.stringify(appointmentContact)
+    })
+    .then(res => res.json())
+    .then(resJSON=>{
+        console.log(resJSON);
+        contactMessage.classList.add('send');
+        contactMessage.innerText = `Dziękujemy ${resJSON.appointmentContact.name}. Twoja wiadomość została wysłana!`
+    });
+}
+
+document.getElementById('contact-form').addEventListener('submit', function(e){
+    e.preventDefault();
+
+    const contactMessage = document.querySelector('.contact-message');
+    let formFieldsContact = document.getElementsByClassName('form-field-contact');
+    let allFieldsContact = false;
+    let appointmentContact = {
+        name: document.getElementById('contact-first-name').value, 
+        email: document.getElementById('contact-email').value,
+        message: document.getElementById('contact-message').value
+    }
+
+
+    for(let i = 0; i<formFieldsContact.length; i++) {
+        if(formFieldsContact[i].value === '') {
+            allFieldsContact = false;
+            formFieldsContact[i].classList.add('error');
+        } else {
+            allFieldsContact = true;
+            formFieldsContact[i].classList.remove('error');
+        }
+    }
+
+
+    if(allFieldsContact) {
+        createAppointmentContact(appointmentContact);
+    } else {
+        contactMessage.classList.add('error');
+        contactMessage.innerText = `Wypełnij wymagane pola`;
+    }
+
+})
